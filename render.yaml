@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: skylark-drone-coordinator
+    runtime: python
+    region: singapore
+    plan: free
+    rootDir: skylark-agent
+    buildCommand: pip install -r requirements.txt
+    startCommand: chainlit run app.py --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GOOGLE_CREDENTIALS_JSON
+        sync: false
+      - key: PILOTS_SPREADSHEET_ID
+        sync: false
+      - key: DRONES_SPREADSHEET_ID
+        sync: false
+      - key: MISSIONS_SPREADSHEET_ID
+        sync: false
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: CHAINLIT_AUTH_SECRET
+        generateValue: true
