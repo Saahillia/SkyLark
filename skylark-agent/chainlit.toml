@@ -1,0 +1,6 @@
+[UI]
+show_readme_as_default = false
+name = "SkyLark Drone Operations"
+
+[meta]
+generated_by = "2.0.4"

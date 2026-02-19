@@ -1,0 +1,118 @@
+# ─────────────────────────────────────────────────────────────
+# SkyLark — .gitignore
+# ─────────────────────────────────────────────────────────────
+
+# ── Secrets & credentials ────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.env
+
+# Keep the example template
+!.env.example
+
+# Google service account / OAuth credentials
+*credentials*.json
+*service_account*.json
+google_credentials*.json
+client_secret*.json
+key.json
+token.json
+*.p12
+*.pfx
+
+# Private keys
+*.pem
+*.key
+
+# SSH keys
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+id_ecdsa
+id_ecdsa.pub
+
+# Generic secrets files
+secrets.json
+secrets.yaml
+secrets.yml
+secret.json
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+
+# Distribution / packaging
+.eggs/
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+MANIFEST
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# mypy / type-checkers
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ── Chainlit ─────────────────────────────────────────────────
+# Runtime file upload cache
+.files/
+
+# ── Logs & databases ─────────────────────────────────────────
+*.log
+logs/
+*.db
+*.sqlite
+*.sqlite3
+
+# ── IDE & editor ─────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS artefacts ─────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V8
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ── Jupyter ──────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Claude Code local settings ───────────────────────────────
+# Contains machine-specific permissions; do not commit
+.claude/
+
+# ── Temporary files ──────────────────────────────────────────
+*.tmp
+*.temp
+*.bak
+*.orig
